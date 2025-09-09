@@ -52,4 +52,26 @@
 
 // Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 9
 
+// 🏆 Code Question 4
+const chef = {
+  name: "Chef Hyur",
+  age: 29,
+  makeBurger: (num = 1) => {
+    console.log(`Ecco ${num} hamburger per te!`);
+  },
+};
 
+const restaurant = {
+  name: "Hyur's Burgers",
+  address: {
+    street: "Main Street",
+    number: 123,
+  },
+  openingDate: new Date(2025, 3, 11),
+  isOpen: false,
+};
+
+// Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+// Per il primo caso utilizzerei lo spread operatore dal momento che troviamo una funzione annidata all'interno di un oggetto, grazie a questo metodo potremo copiare la funzione e utilizzarla in un momento successivo
+// Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+// Per il secondo caso invece utilizzerei structuredClone(), perchè non troviamo una funzione all'interno di questo oggetto e grazie a questo metodo potremo copiare anche l'oggetto date che è un oggetto complesso e che con JSON.parse(JSON.stringify()) avremmo copiato ma in maniera errata.
